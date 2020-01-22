@@ -7,7 +7,7 @@ module.exports = {
   entry: {},
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/[name]-[hashContent].js'
+    filename: 'js/[name]-[contentHash].js'
   },
   devServer: {
     index: `${sections[sections.length-1]}.html`,

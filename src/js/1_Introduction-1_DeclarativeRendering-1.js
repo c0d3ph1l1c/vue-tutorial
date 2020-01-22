@@ -6,3 +6,5 @@ var app = new Vue({
     message: 'Hello Vue!'
   }
 });
+
+// app.message = 'Hi Vue!';
