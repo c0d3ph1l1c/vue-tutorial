@@ -31,16 +31,29 @@
 </head>
 <body>
   <div id="app">
+    <!-- Arguments -->
     <h3>Arguments</h3>
     <a v-bind:href="url" target="_blank">{{ linkTitle }}</a><br>
     <a class="btn" v-on:click="google">Google</a>
     <a class="btn" v-on:click="bing">Bing</a>
 
+    <!-- Dynamic Arguments -->
     <h3>Dynamic Arguments</h3>
     <a v-bind:[attributeName]="url" target="_blank">Link</a><br>
-    <a class="btn" v-on:click="href">href</a>
-    <a class="btn" v-on:click="title">title</a>
+    <a class="btn" v-on:click="changeAttribute('href')">href</a>
+    <a class="btn" v-on:click="changeAttribute('title')">title</a><br><br>
+
+    <a v-on:[eventName]="changeColor('#f88')" v-bind:style="'color: '+color">Change Color On {{ eventname == 'click'? 'Click' : 'Hover' }}</a><br>
+    <a class="btn" v-on:click="changeEvent('click')">Click</a>
+    <a class="btn" v-on:click="changeEvent('mouseover')">Hover</a>
+    <a class="btn" v-on:click="changeColor('#000')">Reset</a><br><br>
     
+    <!-- Modifiers -->
+    <h3>Modifiers</h3>
+    <form action="http://www.google.com" v-on:submit.prevent="onSubmit">
+      Form submit event is prevented<br>
+      <input type="submit" value="Submit">
+    </form>
   </div>
 </body>
 </html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TemplateSyntax - Shorthands</title>
+  <style>
+    h3 { margin: 3rem auto 0.5rem auto; }
+    h3:first-child { margin-top: 1rem; }
+
+    .btn {
+    display: inline-block;
+    width: 3rem;
+    height: 1rem;
+    background: #66f;
+    color: white;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    line-height: 1rem;
+    cursor: pointer;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    }
+
+    .btn:hover { background: #292; }
+    .btn:active { background: #f99; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h3>v-bind(:) & v-on(@) Shorthand</h3>
+    <a :href="url" target="_blank">{{ linkTitle }}</a><br>
+    <a class="btn" @click="google">Google</a>
+    <a class="btn" @click="bing">Bing</a><br><br>
+
+    <a :[attributeName]="url" target="_blank">Link</a><br>
+    <a class="btn" @click="changeAttribute('href')">href</a>
+    <a class="btn" @click="changeAttribute('title')">title</a><br><br>
+
+    <a @[eventName]="changeColor('#f88')" :style="'color: '+color">Change Color On
+      {{ eventname == 'click'? 'Click' : 'Hover' }}</a><br>
+    <a class="btn" @click="changeEvent('click')">Click</a>
+    <a class="btn" @click="changeEvent('mouseover')">Hover</a>
+    <a class="btn" @click="changeColor('#000')">Reset</a><br><br>
+  </div>
+</body>
+</html>

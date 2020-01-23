@@ -6,8 +6,10 @@ new Vue({
     // arguments
     url: 'http://www.google.com',
     linkTitle: 'Google',
-    // dynamic arguments (must be in lowercase)
+    // dynamic arguments (must be in lowercase, as browsers will coerce attribute names into lowercase)
     attributename: 'href',
+    eventname: 'click',
+    color: 'black',
   },
   methods: {
     // arguments
@@ -20,11 +22,15 @@ new Vue({
       this.linkTitle = 'Bing';
     },
     // dynamic arguments
-    href: function() {
-      this.attributename = 'href';
+    changeAttribute: function(attribute) {
+      this.attributename = attribute;
     },
-    title: function() {
-      this.attributename = 'title';
+    changeColor: function(color) {
+      this.color = color;
     },
+    changeEvent: function(event) {
+      this.eventname = event; 
+    },
+    onSubmit: function() {}
   }
 });

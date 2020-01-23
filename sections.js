@@ -9,5 +9,7 @@ module.exports = [
   '2_TheVueInstance-1_Data&Methods-1',
   '2_TheVueInstance-2_InstanceLifecycleHooks-1',
   '3_TemplateSyntax-1_Interpolations-1',
+  '3_TemplateSyntax-2_Directives-1',
+  '3_TemplateSyntax-3_Shorthands-1',
   'index',
 ];
