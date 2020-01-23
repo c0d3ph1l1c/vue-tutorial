@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TemplateSyntax - Directives</title>
+  <style>
+    h3 { margin: 3rem auto 0.5rem auto; }
+    h3:first-child { margin-top: 1rem; }
+
+    /* arguments */
+    .btn { 
+      display: inline-block;
+      width: 3rem;
+      height: 1rem;
+      background: #66f;
+      color: white;
+      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      line-height: 1rem;
+      cursor: pointer;
+      text-align: center;
+      outline: none;
+      text-decoration: none;
+    }
+
+    .btn:hover { background: #292; }
+    .btn:active { background: #f99; }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <h3>Arguments</h3>
+    <a v-bind:href="url" target="_blank">{{ linkTitle }}</a><br>
+    <a class="btn" v-on:click="google">Google</a>
+    <a class="btn" v-on:click="bing">Bing</a>
+
+    <h3>Dynamic Arguments</h3>
+    <a v-bind:[attributeName]="url" target="_blank">Link</a><br>
+    <a class="btn" v-on:click="href">href</a>
+    <a class="btn" v-on:click="title">title</a>
+    
+  </div>
+</body>
+</html>

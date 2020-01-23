@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>The Vue Instance - Instance Lifecycle Hooks</title>
+</head>
+<body>
+  <div id="app">
+    {{ msg }}
+    <br>
+    <button v-on:click="toggleCase">Toggle Case</button>
+    <button v-on:click="destroy">Destroy</button><br>
+    <span style="color: red">{{ destroyNote }}</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>TemplateSyntax - Interpolations</title>
+  <style>
+    h3 { margin: 3rem auto 0.5rem auto; }
+    h3:first-child { margin-top: 1rem; }
+    
+    /* Attributes */
+    #blue { width: 200px; height: 200px; background: #88f; }
+    #red { width: 200px; height: 200px; background: #f88; }
+
+    /* JavaScript */
+    #list-1 { width: 100px; height: 200px;background: #88f; }
+    #list-2 { width: 100px; height: 200px;background: #f88; }
+
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Text -->
+    <h3>Text</h3>
+    <span>Message: {{ msg }}</span><br>
+    <span v-once>This will never change: {{ msg }}</span><br>
+    <button v-on:click="toggleCase">Toggle Case</button><br>
+
+    <!-- Raw HTML -->
+    <h3>Raw HTML</h3>
+    <p>Using mustaches: {{ rawHtml }}</p>
+    <p>Using v-html directive: <span v-html="rawHtml"></span></p>
+
+    <!-- Attributes -->
+    <h3>Attributes</h3>
+    <div v-bind:id="dynamicId"></div>
+    <button v-on:click="toggleColor">Toggle Color</button>
+
+    <!-- Javascript-->
+    <h3>Using JavaScript Expressions</h3>
+    <input type="number" placeholder="Increased by one" v-model="number">
+    <span>{{ number? parseInt(number) + 1 : null }}</span><br>
+
+    <button v-on:click="toggle">Toggle</button>
+    <span>{{ ok? 'YES' : 'NO' }}</span><br>
+
+    <input type="text" v-model="message">
+    <span>{{ message.split('').reverse().join('') }}</span><br>
+
+    <div v-bind:id="'list-' + id">List {{ id }}</div>
+    <button v-on:click="toggleList">Toggle List</button>
+  </div>
+</body>
+</html>

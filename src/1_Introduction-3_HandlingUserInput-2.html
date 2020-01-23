@@ -4,13 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Introduction - Declarative Rendering</title>
+  <title>Introduction - Handling User Input</title>
 </head>
 <body>
-  <div id="app-3">
-    <span v-if="seen">
-      Now you see me
-    </span>
+  <div id="app-6">
+    <p>{{ message }}</p>
+    <input v-model="message">
   </div>
 </body>
 </html>
