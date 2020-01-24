@@ -11,5 +11,10 @@ module.exports = [
   '3_TemplateSyntax-1_Interpolations-1',
   '3_TemplateSyntax-2_Directives-1',
   '3_TemplateSyntax-3_Shorthands-1',
+  '4_ComputedProperties&Watchers-1_ComputedProperties-1',
+  '4_ComputedProperties&Watchers-1_ComputedProperties-2',
+  '4_ComputedProperties&Watchers-1_ComputedProperties-3',
+  '4_ComputedProperties&Watchers-1_ComputedProperties-4',
+  '4_ComputedProperties&Watchers-2_Watchers-1',
   'index',
 ];
