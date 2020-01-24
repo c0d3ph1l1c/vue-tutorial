@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class & Style Bindings - Binding Inline Styles</title>
+  <style>
+    .child {
+      width: 40px;
+      height: 40px;
+    }
+
+    .child:nth-child(odd) { background: #88f; }
+    .child:nth-child(even) { background: #f88; }
+  </style>
+</head>
+<body>
+  <!-- Multiple Values -->
+  <!-- This will only render the last value in the array which the browser supports. -->
+  <div id="app" v-bind:style="{ display: ['-webkit-box', '-ms-flexbox', 'flex'] }">
+    <div class="child">One</div>
+    <div class="child">Two</div>
+    <div class="child">Three</div>
+  </div>
+</body>
+</html>

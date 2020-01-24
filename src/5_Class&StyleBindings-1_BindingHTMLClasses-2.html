@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class & Style Bindings - Binding HTML Classes</title>
+  <style>
+    div {
+    width: 200px;
+    height: 200px;
+    background: #eee;
+    }
+
+    .active { background: #ff8; }
+    .text-danger { color: #f00; }
+  </style>
+</head>
+<body>
+  <!-- Array Syntax -->
+  <div id="app">
+    <div v-bind:class="[activeClass, errorClass]">
+      <h4>
+        Binding HTML Classes - Array Syntax
+      </h4>
+      Yellow Active Background<br>
+      Red Error Text
+    </div>
+    <button @click="toggleActive">Toggle Active</button>
+    <button @click="toggleError">Toggle Error</button>
+
+    <div v-bind:class="[isActive2? activeClass2 : '', errorClass2]">
+      <h4>
+        Binding HTML Classes - Array Syntax<br>
+        Toggle Class in Array Conditionally
+      </h4>
+      Yellow Active Background<br>
+      Red Error Text
+    </div>
+    <button @click="toggleActive2">Toggle Active</button>
+    <button @click="toggleError2">Toggle Error</button>
+
+    <div v-bind:class="[{ active: isActive3 }, errorClass3]">
+      <h4>
+        Binding HTML Classes - Array Syntax<br>
+        Object Syntax inside Array Syntax
+      </h4>
+      Yellow Active Background<br>
+      Red Error Text
+    </div>
+    <button @click="toggleActive3">Toggle Active</button>
+    <button @click="toggleError3">Toggle Error</button>
+  </div>
+</body>
+</html>

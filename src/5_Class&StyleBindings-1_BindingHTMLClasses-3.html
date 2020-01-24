@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class & Style Bindings - Binding HTML Classes</title>
+  <style>
+    p {
+      display: block;
+      box-sizing: border-box;
+      width: 100px;
+      height: 100px;
+    }
+
+    .foo { border-top: 5px solid #f88; }
+    .bar { border-right: 5px solid #8ff; }
+    .baz { border-bottom: 5px solid #3f3; }
+    .boo { border-left: 5px solid #88f; }
+    .active { background: #ff8; }
+  </style>
+</head>
+<body>
+  <!-- With Components -->
+  <div id="app">
+    <my-component 
+      class="baz boo"
+      v-bind:class="{ active: isActive }"
+    ></my-component>
+    <button @click="toggleActive">Toggle Active</button>
+  </div>
+</body>
+</html>

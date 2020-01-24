@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Class & Style Bindings - Binding HTML Classes</title>
+  <style>
+    div {
+      width: 200px;
+      height: 200px;
+      background: #eee;
+    }
+
+    .active { background: #ff8; }
+    .text-danger { color: #f00; }
+  </style>
+</head>
+<body>
+  <!-- Object Syntax -->
+  <div id="app">
+    <div 
+      class="static"
+      v-bind:class="{ active: isActive, 'text-danger': hasError }"
+    >
+      <h4>
+        Binding HTML Classes - Object Syntax
+      </h4>
+      Yellow Active Background<br>
+      Red Error Text
+    </div>
+    <button @click="toggleActive">Toggle Active</button>
+    <button @click="toggleError">Toggle Error</button>
+
+    <div v-bind:class="classObject">
+      <h4>
+        Binding HTML Classes - Object Syntax<br>
+        Class Object
+      </h4>
+      Yellow Active Background<br>
+      Red Error Text
+    </div>
+    <button @click="toggleObjectActive">Toggle Active</button>
+    <button @click="toggleObjectError">Toggle Error</button>
+
+    <div v-bind:class="classObject2">
+      <h4>
+        Binding HTML Classes - Object Syntax<br>
+        Computed Class Object
+      </h4>
+      Yellow Active Background<br>
+      Red Error Text<br>
+      active: isActive && !error
+    </div>
+    <button @click="toggleComputedActive">Toggle isActive</button>
+    <button @click="toggleComputedError">Toggle Error</button>
+  </div>
+</body>
+</html>

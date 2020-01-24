@@ -16,5 +16,12 @@ module.exports = [
   '4_ComputedProperties&Watchers-1_ComputedProperties-3',
   '4_ComputedProperties&Watchers-1_ComputedProperties-4',
   '4_ComputedProperties&Watchers-2_Watchers-1',
+  '5_Class&StyleBindings-1_BindingHTMLClasses-1',
+  '5_Class&StyleBindings-1_BindingHTMLClasses-2',
+  '5_Class&StyleBindings-1_BindingHTMLClasses-3',
+  '5_Class&StyleBindings-1_BindingInlineStyles-1',
+  '5_Class&StyleBindings-1_BindingInlineStyles-2',
+  '5_Class&StyleBindings-1_BindingInlineStyles-3',
+  '5_Class&StyleBindings-1_BindingInlineStyles-4',
   'index',
 ];
