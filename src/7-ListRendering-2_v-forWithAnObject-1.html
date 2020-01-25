@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Rendering - v-for With An Object</title>
+</head>
+<body>
+  <ul id="v-for-object" class="demo">
+    <li v-for="value in object">
+      {{ value }} 
+    </li>
+  </ul>
+
+  <br>
+
+  <!-- v-for should not be put on root object -->
+  <div id="v-for-object-2">
+    <div v-for="(value, name) in object">
+      {{ name }} : {{ value }}
+    </div>
+  </div> 
+
+  <br>
+
+  <div id="v-for-object-3">
+    <div v-for="(value, name, index) in object">
+      {{ index }}. {{ name }}: {{ value }}
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditional Rendering - v-show</title>
+</head>
+<body>
+  <!-- Note that v-show doesn’t support the <template> element, nor does it work with v-else -->
+  <div id="app">
+    <button @click="ok = !ok">Toggle Show</button>
+    <h1 v-show="ok">Hello!</h1>
+  </div>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Rendering - Maintaining State</title>
+</head>
+<body>
+  <!-- Don’t use non-primitive values like objects and arrays as v-for keys. Use string or numeric values instead. -->
+  <div id="v-for-key">
+    <div v-for="item in items" v-bind:key="item.id">
+      {{ item.message }}
+    </div>
+  </div>
+</body>
+</html>

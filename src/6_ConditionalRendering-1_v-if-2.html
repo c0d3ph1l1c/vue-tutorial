@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditional Rendering - v-if</title>
+</head>
+<body>
+  <!-- Conditional Groups with v-if on <template> -->
+  <div id="app">
+    <button @click="ok = !ok">Toggle OK</button>
+    <template v-if="ok">
+      <h1>Title</h1>
+      <p>Paragraph 1</p>
+      <p>Paragraph 2</p>
+    </template>
+  </div>
+</body>
+</html>

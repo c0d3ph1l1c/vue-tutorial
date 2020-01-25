@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditional Rendering - v-if</title>
+</head>
+<body>
+  <!-- v-if -->
+  <div id="app">
+    <h1 v-if="awesome">Vue is awesome!</h1>
+    <h1 v-else>Oh no 😢</h1>
+    <button v-on:click="awesome = !awesome">Toggle Awesome</button>
+  </div>
+</body>
+</html>

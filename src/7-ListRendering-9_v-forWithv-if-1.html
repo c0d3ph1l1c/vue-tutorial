@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>List Rendering - v-for With v-if</title>
+</head>
+<body>
+  <ul id="app">
+    <li v-for="todo in todos" v-if="!todo.isComplete">
+      {{ todo }}
+    </li>
+  </ul>
+
+  <br><br>
+
+  <div id="app2">
+    <button @click="toggleTodos">Toggle Todos</button>
+    <ul v-if="todos.length">
+      <li v-for="todo in todos">
+        {{ todo }}
+      </li>
+    </ul>
+    <p v-else>No todos left!</p>
+  </div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Conditional Rendering - v-if</title>
+</head>
+<body>
+  <!-- Controlling Reusable Elements with key -->
+  <div id="app">
+    <p>Toggle login type will not erase what the user has already entered</p>
+    <template v-if="loginType === 'username'">
+      <label>Username</label>
+      <input placeholder="Enter your username">
+    </template>
+    <template v-else>
+      <label>Email</label>
+      <input placeholder="Enter your email address">
+    </template><br>
+    <button v-on:click="toggleLoginType">Toggle Login Type</button>
+
+    <br><br><br>
+
+    <p>Add a key attribute with unique values to input</p>
+    <template v-if="loginType2 === 'username'">
+      <label>Username</label>
+      <input placeholder="Enter your username" key="username-input">
+    </template>
+    <template v-else>
+      <label>Email</label>
+      <input placeholder="Enter your email address" key="email-input">
+    </template><br>
+    <button v-on:click="toggleLoginType2">Toggle Login Type</button>
+  </div>
+</body>
+</html>
