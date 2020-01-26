@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Handling - System Modifiers</title>
+  <style>
+    .div {
+      width: 100px;
+      height: 100px;
+      background: #8ff;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <!-- Key Up Alt + C -->
+    <h3>Alt + C</h3>
+    <input id="input" v-on:keyup.alt.67="clear">
+
+    <!-- Key Up Ctrl + Click -->
+    <h3>Ctrl + Click</h3>
+    <div id="div" class="div" v-on:click.ctrl="doSomething">Do Something</div>
+
+    <!-- Exact -->
+    <h3>Ctrl + Click</h3>
+    <p>this will fire even if Alt or Shift is also pressed</p>
+    <button v-on:click.ctrl="echoA">A</button>
+
+    <h3>Exact Ctrl + Click</h3>
+    <p>this will only fire when Ctrl and no other keys are pressed</p>
+    <button v-on:click.ctrl.exact="echoA">A</button>
+
+    <h3>Exact Click</h3>
+    <p>this will only fire when no system modifiers are pressed</p>
+    <button v-on:click.exact="echoA">A</button>
+
+    <!-- Mouse Modifiers -->
+    <h3>Mouse Modifiers</h3>
+    <p>Left or right click on the div</p>
+    <div class="div" 
+      v-on:click.left="echoButton($event)"
+      v-on:click.right="echoButton($event)"
+    ></div>
+  </div>
+</body>
+</html>

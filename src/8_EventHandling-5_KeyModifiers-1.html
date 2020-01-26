@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Handling - Key Modifiers</title>
+</head>
+<body>
+  <!-- You can directly use any valid key names exposed via KeyboardEvent.key as modifiers by converting them to kebab-case. -->
+  
+  <div id="app">
+    <h3>Enter</h3>
+    <input v-on:keyup.enter="submit">
+
+    <h3>Page Down</h3>
+    <input v-on:keyup.page-down="onPageDown">
+
+    <h3>Key Codes 13 (Enter, Deprecated)</h3>
+    <input v-on:keyup.13="submit">
+    
+    <h3>Custom Key Modifiers 113 (F2)</h3>
+    <input v-on:keyup.keyCodes.f2="submit">
+  </div>
+</body>
+</html>

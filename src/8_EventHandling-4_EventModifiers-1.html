@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Event Handling - Event Modifiers</title>
+  <style>
+    a, input[type="submit"] {
+      width: 70px;
+      height: 30px;
+      background: #333;
+      border-radius: 6px;
+      color: #fff;
+      display: block;
+      line-height: 30px;
+      text-align: center; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+    }
+
+    a:hover {
+      background: #888;
+    }
+
+    .parent {
+      width: 100px;
+      height: 100px;   
+      position: relative;
+    }
+
+    .parent:nth-child(8n+2),
+    .parent:nth-child(8n+4) {
+      background: #f88;
+    }
+
+    .parent:nth-child(8n+6),
+    .parent:nth-child(8n+8) {
+      background: #88f;
+    }
+
+    .parent.once { background: #ff8; }
+    .parent.passive { overflow: scroll; }
+  </style>
+</head>
+<body>
+  <!-- Order matters when using modifiers because the relevant code is generated in the same order. Therefore using v-on:click.prevent.self will prevent all clicks while v-on:click.self.prevent will only prevent clicks on the element itself. -->
+  <div id="app">
+    <!-- Without Stop-->
+    <h4>Without Stop</h4>
+    <div class="parent" v-on:click="doThis($event, 'parent')">
+      <a v-on:click="doThis($event, 'child')">Click</a>
+    </div>
+
+    <!-- With Stop-->
+    <!-- the click event's propagation will be stopped -->
+    <h4>With Stop</h4>
+    <div class="parent" v-on:click="doThis($event, 'parent')">
+      <a v-on:click.stop="doThis($event, 'child')">Click</a>
+    </div>
+
+    <!-- Without prevent -->
+    <h4>Without Prevent</h4>
+    <form class='parent' v-on:submit="onSubmit">
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- With prevent -->
+    <!-- the submit event will no longer reload the page -->
+    <h4>With Prevent</h4>
+    <form class='parent' v-on:submit.prevent="onSubmit">
+      <input type="submit" value="Submit">
+    </form>
+
+    <!-- Without Stop & Prevent (Preserve Logs) -->
+    <h4>Without Stop & Prevent</h4>
+    <div class="parent" v-on:click="doThis($event, 'parent')">
+      <a href="https://www.google.com" v-on:click="doThis($event, 'child')">Click</a>
+    </div>
+
+    <!-- With Stop & Prevent -->
+    <!-- modifiers can be chained -->
+    <h4>With Stop & Prevent</h4>
+    <div class="parent" v-on:click="doThis($event, 'parent')">
+      <a href="https://www.google.com" v-on:click.stop.prevent="doThis($event, 'child')">Click</a>
+    </div>
+
+    <!-- Without Capture -->
+    <h4>Without Capture</h4>
+    <div class="parent" v-on:click="doThis($event, 'parent')">
+      <a v-on:click="doThis($event, 'child')">Click</a>
+    </div>
+
+    <!-- With Capture -->
+    <h4>With Capture</h4>
+    <div class="parent" v-on:click.capture="doThis($event, 'parent')">
+      <a v-on:click="doThis($event, 'child')">Click</a>
+    </div>
+
+    <!-- Without Self -->
+    <h4>Without Self</h4>
+    <div class="parent" v-on:click="doThat($event, 'parent')">
+      <a v-on:click="doThat($event, 'child')">Click</a>
+    </div>
+
+    <!-- With Self -->
+    <h4>With Self</h4>
+    <div class="parent" v-on:click.self="doThat($event, 'parent')">
+      <a v-on:click="doThat($event, 'child')">Click</a>
+    </div>    
+
+    <!-- With Once -->
+    <h4>With Once</h4>
+    <div class="parent once">
+      <a v-on:click.once="doThat($event, '<a>')">Click</a>
+    </div>
+
+    <!-- With Passive -->
+    <!-- Check console -->
+    <h4>With Passive</h4>
+    <div class="parent passive" v-on:scroll.passive="onScroll($event)">
+      Lorem ipsum dolor sit amet, no wisi delectus nec, dolor quaeque no eos. Eu nec prodesset reprimique, eos illum
+      veritus ei. Vidit civibus et vim. Ex per purto corpora.
+
+      Sit quodsi oportere no, atomorum adolescens ex sit. No vix alia putent. Quo quod scaevola id, vim novum fabulas
+      scriptorem ut. An usu definitionem necessitatibus, et case solet soleat nec. Has justo mundi contentiones ea,
+      aperiam pericula prodesset qui id.
+    </div>
+  </div>
+</body>
+</html>

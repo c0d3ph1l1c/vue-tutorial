@@ -42,5 +42,11 @@ module.exports = [
   '7_ListRendering-9_v-forWithv-if-1',
   '7_ListRendering-10_v-forWithAComponent-1',
   '7_ListRendering-10_v-forWithAComponent-2',
+  '8_EventHandling-1_ListeningToEvents-1',
+  '8_EventHandling-2_MethodEventHandlers-1',
+  '8_EventHandling-3_MethodInInlineHandlers-1',
+  '8_EventHandling-4_EventModifiers-1',
+  '8_EventHandling-5_KeyModifiers-1',
+  '8_EventHandling-6_SystemModifiers-1',
   'index',
 ];
