@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Input Bindings - Select</title>
+</head>
+<body>
+  <!-- If the initial value of your v-model expression does not match any of the options, the <select> element will render in an “unselected” state. On iOS this will cause the user not being able to select the first item because iOS does not fire a change event in this case. It is therefore recommended to provide a disabled option with an empty value. -->
+
+  <!-- Select -->
+  <!-- Use the value of option if available, otherwise use textContent-->
+  <div id="app">
+    <select v-model="selected">
+      <option disabled value="">Please select one</option>
+      <option>A</option>
+      <option>B</option value="alpha">
+      <option>C</option value="alpha">
+    </select>
+    <span>Selected: {{ selected }}</span>
+  </div>
+
+  <br><br>
+
+  <div id="app2">
+    <select v-model="selected" multiple>
+      <option>A</option>
+      <option>B</option>
+      <option>C</option>
+    </select>
+    <br>
+    <span>Selected: {{ selected }}</span>
+  </div>
+
+  <br><br>
+
+  <div id="app3">
+    <select v-model="selected">
+      <option v-for="option in options" v-bind:value="option.value">
+        {{ option.text }}
+      </option>
+    </select>
+    <span>Selected: {{ selected }}</span>
+  </div>
+</body>
+</html>

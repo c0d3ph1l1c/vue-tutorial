@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component Basics - DOM Template Parsing Caveats</title>
+</head>
+<body>
+  <!-- Check the Elements in Dev tools -->
+  <div id="app">
+    <!-- Without is (hoisted out as invalid content) -->
+    <h3>Without is</h3>
+    <table>
+      <blog-post-row></blog-post-row>
+    </table>
+    
+    <br>
+
+    <!-- With is -->
+    <h3>With is</h3>
+    <table>
+      <tr is="blog-post-row"></tr>
+    </table>
+  </div>
+</body>
+</html>

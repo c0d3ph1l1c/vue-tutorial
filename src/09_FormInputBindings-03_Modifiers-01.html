@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Input Bindings - Modifiers</title>
+</head>
+<body>
+  <!-- lazy -->
+  <!-- synced after "change" instead of "input" -->
+  <div id="app">
+    <h3>Lazy Modifiers (Press Enter after input)</h3>
+    <input v-model.lazy="msg">
+    <p>{{ msg }}</p>
+  </div>
+</body>
+</html> 

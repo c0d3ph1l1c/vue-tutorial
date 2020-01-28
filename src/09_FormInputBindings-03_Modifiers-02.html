@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Input Bindings - Modifiers</title>
+</head>
+<body>
+  <!-- This is often useful, because even with type="number", the value of HTML input elements always returns a string. If the value cannot be parsed with parseFloat(), then the original value is returned. -->
+
+  <!-- Numbers -->
+  <div id="app">
+    <input v-model.number="num1" type="number"> + 
+    <input v-model.number="num2" type="number">
+    <span>{{ sum }}</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Input Bindings - Value Bindings</title>
+</head>
+<body>
+  <!-- The true-value and false-value attributes don’t affect the input’s value attribute, because browsers don’t include unchecked boxes in form submissions. To guarantee that one of two values is submitted in a form (e.g. “yes” or “no”), use radio inputs instead.-->
+
+  <!-- Checkbox -->
+  <div id="app">
+    <input 
+      id="checkbox"
+      type="checkbox"
+      v-model="toggle"
+      true-value="yes"
+      false-value="no"
+    >
+    <label for="checkbox" style="user-select: none;">{{ toggle }}</label>
+  </div>
+</body>
+</html>

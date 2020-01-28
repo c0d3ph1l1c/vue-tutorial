@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Input Bindings - Value Bindings</title>
+</head>
+<body>
+  <div id="app">
+    <select v-model="selected">
+      <!-- inline object literal -->
+      <option v-bind:value="{ number: 123 }">123</option>
+      <option v-bind:value="{ number: 456 }">456</option>
+    </select>
+    <br>
+    <span>Selected: {{ selected? selected.number : selected }}</span>
+  </div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Form Input Bindings - Value Bindings</title>
+  <style>
+    label { user-select: none; }
+  </style>
+</head>
+<body>
+  <!-- Radio -->
+  <div id="app">
+    <input type="radio" id="A" v-model="pick" v-bind:value="a">
+    <label for="A">A</label>
+    <br>
+    <input type="radio" id="B" v-model="pick" v-bind:value="b">
+    <label for="B">B</label>
+    <br>
+    <span>Picked: {{ pick }}</span>
+  </div>
+</body>
+</html>

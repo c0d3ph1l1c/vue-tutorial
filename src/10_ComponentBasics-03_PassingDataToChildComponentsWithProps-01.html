@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component Basics - Passing Data to Child Components with Props</title>
+</head>
+<body>
+  <!-- Props -->
+  <div id="app">
+    <blog-post title="My journey with Vue"></blog-post>
+    <blog-post title="Blogging with me"></blog-post>
+    <blog-post title="Why Vue is so fun"></blog-post>
+  </div>
+
+  <div id="blog-post-demo">
+    <blog-post 
+      v-for="post in posts" 
+      v-bind:key="post.id"
+      v-bind:title="post.title"
+    ></blog-post>
+  </div>
+</body>
+</html>

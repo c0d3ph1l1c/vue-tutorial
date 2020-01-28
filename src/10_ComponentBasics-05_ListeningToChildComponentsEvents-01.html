@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component Basics - Listening To Child Components Events</title>
+</head>
+<body>
+  <div id="blog-posts-events-demo">
+    <div :style="{ fontSize: postFontSize + 'em'}">
+      <blog-post
+        v-for="post in posts"
+        v-bind:key="post.id"
+        v-bind:post="post"
+        v-on:enlarge-text="postFontSize += 0.1"
+      ></blog-post>
+    </div>
+  </div>
+</body>
+</html>

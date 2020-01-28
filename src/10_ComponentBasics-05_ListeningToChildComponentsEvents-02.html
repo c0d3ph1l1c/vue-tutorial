@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component Basics - Listening To Child Components Events</title>
+</head>
+<body>
+  <!-- Emitting a Value With an Event -->
+  <div id="blog-posts-events-demo">
+    <div :style="{fontSize: `${postFontSize}em`}">
+      <blog-post
+      v-for="post in posts"
+      v-bind:key="post.id"
+      v-bind:post="post"
+      v-on:enlarge-text="postFontSize += $event"
+      ></blog-post>
+    </div>
+  </div>
+
+  <div id="blog-posts-events-demo-2">
+    <div :style="{fontSize: `${postFontSize}em`}">
+      <blog-post v-for="post in posts" v-bind:key="post.id" v-bind:post="post"
+        v-on:enlarge-text="onEnlargeText"></blog-post>
+    </div>
+  </div>
+</body>
+</html>
