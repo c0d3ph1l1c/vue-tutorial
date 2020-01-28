@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Component Registration - Local Registration</title>
+</head>
+<body>
+  <div id="app">
+    <component-a customstyle="color: #88f;">This is Component A</component-a>
+    <component-b custom-style="color: #f88;">This is Component B</component-b>
+  </div>
+
+  <br><br><br>
+
+  <div id="app2">
+    <component-a 
+      style-a="background: #f88; padding: 0.5rem;" 
+      style-b="background: #88f; padding: 0.5rem;"
+    >
+      This is Component B within Component A
+    </component-a>
+  </div>
+</body>
+</html>

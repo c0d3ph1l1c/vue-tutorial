@@ -70,5 +70,8 @@ module.exports = [
   '10_ComponentBasics-06_ContentDistributionWithSlots-01',
   '10_ComponentBasics-07_DynamicComponents-01',
   '10_ComponentBasics-08_DOMTemplateParsingCaveats-01',
+  '11_ComponentRegistration-01_LocalRegistration-01',
+  '11_ComponentRegistration-02_ModuleSystems-01',
+  '11_ComponentRegistration-02_ModuleSystems-02',
   'index',
 ];
