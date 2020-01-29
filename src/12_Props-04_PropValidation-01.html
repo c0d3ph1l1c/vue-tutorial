@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Props - Prop Validation</title>
+</head>
+<body>
+  <!-- Check console for Vue's warning -->
+  <!-- Note that props are validated before a component instance is created, so instance properties (e.g. data, computed, etc) will not be available inside default or validator functions. -->
+  <div id="app">
+    <my-component
+      v-bind:prop-a="'ten'"
+      v-bind:prop-b="true"
+      v-bind:prop-c="true"
+      v-bind:prop-d="'ten'"
+      v-bind:prop-e="'ten'"
+      v-bind:prop-f="'ten'"
+      v-bind:author="new Person('John', 'Doe')"
+    ></my-component>
+  </div>
+</body>
+</html>

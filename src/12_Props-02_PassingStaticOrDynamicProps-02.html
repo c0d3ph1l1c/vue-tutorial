@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Props - Passing Static Or Dynamic Props</title>
+</head>
+<body>
+  <!-- Passing a Boolean -->
+  <div id="app">
+    <!-- Including the prop with no value will imply `true`. (Must specify types of field in props declaration) -->
+    <blog-post 
+      is-published
+      title="Static Post"
+      content="<p>This is a static post</p>"
+    ></blog-post>
+
+    <br><br>
+
+    <!-- Even though `false` is static, we need v-bind to tell Vue that 
+    this is a JavaScript expression rather than a string. -->
+    <blog-post 
+      v-bind:is-published="false"
+      title="Static Post 2"
+      content="<p>This is a static post 2</p>"
+    ></blog-post>
+
+    <br><br>
+
+    <!-- Dynamically assign to the value of a variable. -->
+    <blog-post 
+      v-bind:title="post.title"
+      v-bind:content="post.content"
+      v-bind:is-published="post.isPublished"
+      v-on:publish="post.isPublished = true"
+    ></blog-post>
+  </div>
+</body>
+</html>

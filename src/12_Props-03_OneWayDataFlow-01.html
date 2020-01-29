@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Props - One Way Data Flow</title>
+</head>
+<body>
+  <!-- There are usually two cases where it’s tempting to mutate a prop -->
+
+  <!-- 1. The prop is used to pass in an initial value; the child component wants to use it as a local data property afterwards-->
+  <div id="app">
+    <click-counter 
+      initial-counter="0"
+    ></click-counter>
+  </div>
+
+  <br><br>
+
+  <!-- 2. The prop is passed in as a raw value that needs to be transformed -->
+  <div id="app2">
+    <size-input  
+      v-bind:size="size"
+      v-on:size-changed="size = $event"
+    ></size-input>
+  </div>
+
+  <!-- Note that objects and arrays in JavaScript are passed by reference, so if the prop is an array or object, mutating the object or array itself inside the child component will affect parent state. -->
+</body>
+</html>
