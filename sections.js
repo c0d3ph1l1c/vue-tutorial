@@ -87,5 +87,9 @@ module.exports = [
   '13_CustomEvents-02_CustomizingComponentVModel-01',
   '13_CustomEvents-03_BindingNativeEventsToComponents-01',
   '13_CustomEvents-04_SyncModifier-01',
+  '14_Slots-01_SlotContent-01',
+  '14_Slots-02_CompilationScope-01',
+  '14_Slots-03_FallbackContent-01',
+  '14_Slots-04_NamedSlots-01',
   'index',
 ];

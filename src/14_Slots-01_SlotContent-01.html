@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Slot Content</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+  <div id="app">
+    <navigation-link url="/profile">
+      Your Profile
+    </navigation-link>
+
+    <br><br>
+
+    <navigation-link url="/profile">
+      <!-- Add a Font Awesome icon -->
+      <span class="fa fa-user"></span>
+      Your Profile
+    </navigation-link>
+
+    <br><br>
+
+    <navigation-link url="/profile">
+      <!-- Use a component to add an icon -->
+      <font-awesome-icon name="user"></font-awesome-icon>
+      Your Profile
+    </navigation-link>
+  </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Compilation Scope</title>
+</head>
+<body>
+  <!-- Everything in the parent template is compiled in parent scope; everything in the child template is compiled in the child scope. -->
+
+  <div id="app">
+    <navigation-link url="/profile">
+      Logged in as {{ user.name }}
+    </navigation-link>
+
+    <br><br>
+
+    <navigation-link url="/profile">
+      Clicking here will send you to: {{ url }}
+
+      <!--
+        The `url` will be undefined, because this content is passed
+        _to_ <navigation-link>, rather than defined _inside_ the
+        <navigation-link> component.
+      -->
+    </navigation-link>
+  </div>
+</body>
+</html>
