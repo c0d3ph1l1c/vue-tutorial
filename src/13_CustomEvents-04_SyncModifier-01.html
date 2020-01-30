@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Custom Events - Sync Modifier</title>
+</head>
+<body>
+  <!-- We recommend emitting events in the pattern of update:myPropName -->
+
+  <div id="app">
+    <text-document
+      v-bind:title="doc.title"
+      v-on:update:title="doc.title = $event"
+    ></text-document>
+  </div>
+
+  <br><br>
+
+  <!-- Note that v-bind with the .sync modifier does not work with expressions (e.g. v-bind:title.sync=”doc.title + ‘!’” is invalid). Instead, you must only provide the name of the property you want to bind, similar to v-model. -->
+
+  <div id="app2">
+    <text-document
+      v-bind:title.sync="doc.title"
+    ></text-document>
+  </div>  
+  
+  <br><br>
+
+  <!-- The .sync modifier can also be used with v-bind when using an object to set multiple props at once. This passes each property in the doc object (e.g. title) as an individual prop, then adds v-on update listeners for each one. -->
+
+  <div id="app3">
+    <text-document
+      v-bind.sync="doc"
+    ></text-document>
+  </div>  
+</body>
+</html>

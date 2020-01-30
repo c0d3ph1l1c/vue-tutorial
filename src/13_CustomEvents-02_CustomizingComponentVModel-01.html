@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Custom Events - Customizing Component v-model</title>
+</head>
+<body>
+  <!-- By default, v-model on a component uses value as the prop and input as the event, but some input types such as checkboxes and radio buttons may want to use the value attribute for a different purpose. Using the model option can avoid a conflict in such cases -->
+  
+  <div id="app">
+    <base-checkbox v-model="lovingVue"></base-checkbox>
+    <base-checkbox2 v-bind:value="lovingVue" v-on:change="lovingVue = $event"></base-checkbox2>
+  </div>
+</body>
+</html>

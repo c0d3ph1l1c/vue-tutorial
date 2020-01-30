@@ -83,5 +83,9 @@ module.exports = [
   '12_Props-04_PropValidation-01',
   '12_Props-05_NonPropAttributes-01',
   '12_Props-05_NonPropAttributes-02',
+  '13_CustomEvents-01_EventNames-01',
+  '13_CustomEvents-02_CustomizingComponentVModel-01',
+  '13_CustomEvents-03_BindingNativeEventsToComponents-01',
+  '13_CustomEvents-04_SyncModifier-01',
   'index',
 ];
