@@ -103,5 +103,6 @@ module.exports = [
   '15_Dynamic&AsyncComponents-01_KeepAliveWithDynamicComponents-01',
   '15_Dynamic&AsyncComponents-02_AsyncComponents-01',
   '15_Dynamic&AsyncComponents-02_AsyncComponents-02',
+  '16_HandlingEdgeCases-01_Element&ComponentAccess-01',
   'index',
 ];
