@@ -100,5 +100,8 @@ module.exports = [
   '14_Slots-08_OtherExamples-01',
   '14_Slots-09_DeprecatedSyntax-01',
   '14_Slots-09_DeprecatedSyntax-02',
+  '15_Dynamic&AsyncComponents-01_KeepAliveWithDynamicComponents-01',
+  '15_Dynamic&AsyncComponents-02_AsyncComponents-01',
+  '15_Dynamic&AsyncComponents-02_AsyncComponents-02',
   'index',
 ];
