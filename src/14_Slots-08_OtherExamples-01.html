@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Other Examples</title>
+</head>
+<body>
+  <div id="app">
+    <todo-list v-bind:todos="todos">
+      <template v-slot:todo="{ todo }">
+        <span v-if="todo.isComplete">✓</span>
+        {{ todo.text }}
+      </template>
+    </todo-list>
+  </div>
+</body>
+</html>

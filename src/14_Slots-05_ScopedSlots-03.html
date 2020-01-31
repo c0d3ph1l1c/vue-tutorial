@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Scoped Slots</title>
+</head>
+<body>
+  <!-- Abbreviated Syntax for Lone Default Slots -->
+  <!-- Whenever there are multiple slots, use the full <template> based syntax for all slots -->
+  <div id="app">
+    <current-user>
+      <template v-slot:default="slotProps">
+        {{ slotProps.user.firstName }}
+      </template>
+      
+      <template v-slot:other="otherSlotProps">
+        {{ otherSlotProps.user.lastName }}
+      </template>
+    </current-user>
+
+    <br><br>
+
+    <current-user>
+      <template v-slot:default="slotProps">
+      </template>
+
+      <template v-slot:other="otherSlotProps">
+      </template>
+    </current-user>
+  </div>
+</body>
+</html>

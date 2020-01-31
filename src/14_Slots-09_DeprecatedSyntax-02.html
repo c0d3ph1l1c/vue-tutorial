@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Deprecated Syntax</title>
+</head>
+<body>
+  <!-- Scoped Slots with the slot-scope Attribute -->
+  <!-- Deprecated in 2.6.0+. Use v-slot:default="slotProps" instead -->
+  <div id="app">
+    <slot-example>
+      <template slot="default" slot-scope="slotProps">
+        {{ slotProps.msg }}
+      </template>
+    </slot-example>
+
+    <br><br>
+
+    <!-- slot="default" can be omitted as it is implied -->
+    <slot-example>
+      <template slot-scope="slotProps">
+        {{ slotProps.msg }}
+      </template>
+    </slot-example>
+
+    <br><br>
+
+    <!-- slot-scope attribute can also be used directly on a non-<template> element (including components) -->
+    <slot-example>
+      <span slot-scope="slotProps">
+        {{ slotProps.msg }}
+      </span>
+    </slot-example>
+
+    <br><br>
+
+    <!-- The value of slot-scope can accept any valid JavaScript expression that can appear in the argument position of a function definition. This means in supported environments (single-file components or modern browsers) you can also use ES2015 destructuring in the expression -->
+    <slot-example>
+      <span slot-scope="{ msg }">
+        {{ msg }}
+      </span>
+    </slot-example>
+
+    <todo-list v-bind:todos="todos">
+      <template slot="todo" slot-scope="{ todo }">
+        <span v-if="todo.isComplete">✓</span>
+        {{ todo.text }}
+      </template>
+    </todo-list>
+  </div>
+
+</body>
+</html>

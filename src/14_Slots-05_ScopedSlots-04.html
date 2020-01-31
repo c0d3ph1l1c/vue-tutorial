@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Scoped Slots</title>
+</head>
+<body>
+  <!-- Destructuring Slot Props -->
+  <div id="app">
+    <!-- You can also use ES2015 destructuring to pull out specific slot props -->
+    <current-user v-slot="{ user }">
+      {{ user.firstName }}
+    </current-user>
+
+    <br><br>
+
+    <!-- Renaming props -->
+    <current-user v-slot="{ user: person }">
+      {{ person.firstName }}
+    </current-user>
+  </div>
+
+  <br><br>
+
+  <div id="app2">
+    <!-- You can even define fallbacks, to be used in case a slot prop is undefined -->
+    <current-user2 v-slot="{ user = { firstName: 'Guest' }}">
+      {{ user.firstName }}
+    </current-user2>
+  </div>
+</body>
+</html>

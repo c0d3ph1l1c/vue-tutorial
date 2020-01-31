@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Slots - Deprecated Syntax</title>
+</head>
+<body>
+  <!-- Named Slots with the slot Attribute -->
+  <!-- Deprecated in 2.6.0+. Used v-slot instead -->
+  <div id="app">
+    <base-layout>
+      <template slot="header">
+        <h1>Here might be a page title</h1>
+      </template>  
+
+      <p>A paragraph for the main content.</p>
+      <p>And another one.</p>
+
+      <template slot="footer">
+        <p>Here's some contact info</p>
+      </template> 
+    </base-layout>
+
+    <br><br>
+
+    <!-- Slot attribute can also be used directly on a normal element -->
+    <base-layout>
+      <h1 slot="header">Here might be a page title</h1> 
+
+      <p>A paragraph for the main content.</p>
+      <p>And another one.</p>
+
+      <p slot="footer">Here's some contact info</p>
+    </base-layout>
+  </div>
+</body>
+</html>
