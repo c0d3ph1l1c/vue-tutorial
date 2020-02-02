@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling Edge Cases - Circular Reference</title>
+</head>
+<body>
+  <!-- When you register a component globally using Vue.component, the global ID is automatically set as the component’s name option. -->
+
+  <!-- Recursive Components -->
+  <div id="app">
+    <unique-name-of-my-component v-bind:level="3"></unique-name-of-my-component>
+
+    <br><br>
+
+    <my-component v-bind:level="3"></my-component>
+  </div>
+</body>
+</html>

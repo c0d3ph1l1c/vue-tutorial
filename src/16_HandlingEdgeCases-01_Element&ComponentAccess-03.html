@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling Edge Cases - Element & Component Access</title>
+</head>
+<body>
+  <!-- $refs are only populated after the component has been rendered, and they are not reactive. It is only meant as an escape hatch for direct child manipulation - you should avoid accessing $refs from within templates or computed properties. -->
+
+  <!-- Accessing Child Component Instances & Child Elements -->
+  <div id="app">
+    <parent-component>
+    </parent-component>
+  </div>
+</body>
+</html>

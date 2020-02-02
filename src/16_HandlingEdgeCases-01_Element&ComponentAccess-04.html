@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling Edge Cases - Element & Component Access</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHbknPTCvUSgWwU0jJ68m4h6b7vpyP6hM"></script>
+  <style>
+    .map {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <!-- There are downsides to dependency injection. It couples components in your application to the way they’re currently organized, making refactoring more difficult. Provided properties are also not reactive. This is by design, because using them to create a central data store scales just as poorly as using $root for the same purpose. If the properties you want to share are specific to your app, rather than generic, or if you ever want to update provided data inside ancestors, then that’s a good sign that you probably need a real state management solution like Vuex instead. -->
+  
+  <!-- Dependency Injection -->
+  <!-- Map cannot be shown as our localhost URL is not authorized for the key -->
+  <div id="app">
+    <google-map>
+      <google-map-marker v-bind:places="vueConfCities"></google-map-marker>
+    </google-map>
+  </div>
+</body>
+</html>

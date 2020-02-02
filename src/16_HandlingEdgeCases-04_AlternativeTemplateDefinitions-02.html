@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling Edge Cases - Alternative Template Definitions</title>
+</head>
+<body>
+  <!-- These can be useful for demos with large templates or in extremely small applications, but should otherwise be avoided, because they separate templates from the rest of the component definition. -->
+
+  <!-- X-Template -->
+  <div id="app">
+    <hello-world></hello-world>
+  </div>
+
+  <!-- Your x-template needs to be defined outside the DOM element to which Vue is attached -->
+  <script type="text/x-template" id="hello-world-template">
+    <p>Hello hello hello</p>
+  </script>
+</body>
+</html>

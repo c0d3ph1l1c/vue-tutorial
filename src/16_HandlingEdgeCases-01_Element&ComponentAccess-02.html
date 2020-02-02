@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling Edge Cases - Element & Component Access</title>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHbknPTCvUSgWwU0jJ68m4h6b7vpyP6hM"></script>
+  <style>
+    .map {
+      width: 100%;
+      height: 400px;
+    }
+  </style>
+</head>
+<body>
+  <!-- In most cases, reaching into the parent makes your application more difficult to debug and understand, especially if you mutate data in the parent. When looking at that component later, it will be very difficult to figure out where that mutation came from. -->>
+
+  <!-- Accessing the Parent Component Instance -->
+  <!-- Map cannot be shown as our localhost URL is not authorized for the key -->
+  <div id="app">
+    <google-map>
+      <google-map-marker v-bind:places="vueConfCities"></google-map-marker>
+    </google-map>
+  </div>
+</body>
+</html>

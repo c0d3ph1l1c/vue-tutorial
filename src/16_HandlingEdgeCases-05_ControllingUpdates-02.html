@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Handling Edge Cases - Controlling Updates</title>
+</head>
+<body>
+  <!-- Rendering plain HTML elements is very fast in Vue, but sometimes you might have a component that contains a lot of static content. In these cases, you can ensure that it’s only evaluated once and then cached by adding the v-once directive to the root element. -->
+
+  <!-- Once again, try not to overuse this pattern. While convenient in those rare cases when you have to render a lot of static content, it’s simply not necessary unless you actually notice slow rendering – plus, it could cause a lot of confusion later. For example, imagine another developer who’s not familiar with v-once or simply misses it in the template. They might spend hours trying to figure out why the template isn’t updating correctly. -->
+
+  <!-- Cheap Static Components with v-once -->
+  <div id="app">
+    <terms-of-service></terms-of-service>
+  </div>
+</body>
+</html>
