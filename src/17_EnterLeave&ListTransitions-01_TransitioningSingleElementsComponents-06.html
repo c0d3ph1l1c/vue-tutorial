@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enter/Leave & List Transitions - Transitioning Single Elements Components</title>
+</head>
+<body>
+  <!-- JavaScript Hooks -->
+
+  <!--
+    Velocity works very much like jQuery.animate and is
+    a great option for JavaScript animations
+  -->
+  <div id="example-4">
+    <button @click="show = !show">
+      Toggle
+    </button>
+    <transition
+      v-on:before-enter="beforeEnter"
+      v-on:enter="enter"
+      v-on:leave="leave"
+      v-bind:css="false"
+    >
+      <p 
+        v-if="show"
+        v-bind:style="{ transformOrigin: 'left center'}"
+      >
+        Demo
+      </p>
+    </transition>
+  </div>
+</body>
+</html>

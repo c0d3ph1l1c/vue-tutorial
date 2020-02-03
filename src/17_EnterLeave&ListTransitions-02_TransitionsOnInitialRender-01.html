@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enter/Leave & List Transitions - Transitions On Initial Render</title>
+  <style>
+    .custom-appear-class {
+      opacity: 0;
+    }
+
+    .custom-appear-active-class {
+      transition: opacity 5s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <transition
+      appear
+      appear-class="custom-appear-class"
+      appear-to-class="custom-appear-to-class"
+      appear-active-class="custom-appear-active-class"
+    >
+      <p 
+        :style="{ transformOrigin: 'center center'}"
+      >hello</p>
+    </transition>
+  </div>
+
+  <div id="app2">
+    <transition
+      appear
+      @before-appear="beforeAppear"
+      @appear="appear"
+      @after-appear="afterAppear"
+      @appear-cancelled="appearCancelled"
+      :css="false"
+    >
+    <p>TEST CONTENT</p>
+    </transition>
+  </div>
+</body>
+</html>

@@ -114,5 +114,12 @@ module.exports = [
   '16_HandlingEdgeCases-04_AlternativeTemplateDefinitions-02',
   '16_HandlingEdgeCases-05_ControllingUpdates-01',
   '16_HandlingEdgeCases-05_ControllingUpdates-02',
+  '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-01',
+  '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-02',
+  '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-03',
+  '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-04',
+  '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-05',
+  '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-06',
+  '17_EnterLeave&ListTransitions-02_TransitionsOnInitialRender-01',
   'index',
 ];

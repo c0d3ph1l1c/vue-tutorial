@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enter/Leave & List Transitions - Transitioning Single Elements Components</title>
+  <style>
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity .5s ease;
+    }
+
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    } 
+  </style>
+</head>
+<body>
+  <!-- Explicit Transition Durations -->
+  <!-- Check element class as it toggles -->
+  <div id="app">
+    <button @click="show = !show">Toggle</button>
+    <transition name="fade" :duration="3000">
+      <p v-if="show">Hello</p>
+    </transition>
+  </div>
+
+  <div id="app2">
+    <button @click="show = !show">Toggle</button>
+    <transition name="fade" :duration="{ enter: 300, leave: 3000 }">
+      <p v-if="show">Hello</p>
+    </transition>
+  </div>
+</body>
+</html>
