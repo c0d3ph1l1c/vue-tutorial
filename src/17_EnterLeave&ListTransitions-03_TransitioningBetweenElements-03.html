@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enter/Leave & List Transitions - Transitioning Between Elements</title>
+  <style>
+    .fade-enter, .fade-leave-to {
+      opacity: 0;
+    }
+
+    .fade-enter-active, .fade-leave-active {
+      transition: opacity 0.5s ease;
+    }
+
+    .slide-fade-enter {
+      transform: translateX(31px);
+      opacity: 0;
+    }
+
+    .slide-fade-leave-active {
+      transform: translateX(-31px);
+      opacity: 0;
+    }
+
+    .slide-fade-enter-active, .slide-fade-leave-active {
+      transition: all 1s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Transition Modes -->
+
+  <!-- There’s still one problem though. Try clicking the button below: -->
+  <div id="app">
+    <transition name="fade">
+      <button v-bind:key="isOn" @click="isOn = !isOn" >
+        {{ isOn? 'off' : 'on' }} 
+      </button>
+    </transition>
+  </div>
+
+  <br>
+
+  <!-- Sometimes this works great, like when transitioning items are absolutely positioned on top of each other: -->
+  <div id="app2">
+    <transition name="fade">
+      <button v-bind:key="isOn" @click="isOn = !isOn" :style="{ position: 'absolute' }">
+        {{ isOn? 'off' : 'on' }} 
+      </button>
+    </transition>
+  </div>
+
+  <br><br>
+
+  <!-- And then maybe also translated so that they look like slide transitions: -->
+  <div id="app3">
+    <transition name="slide-fade">
+      <button v-bind:key="isOn" @click="isOn = !isOn" :style="{ position: 'absolute' }">
+        {{ isOn? 'off' : 'on' }} 
+      </button>
+    </transition>
+  </div>
+
+  <br><br>
+
+  <!-- out-in: Current element transitions out first, then when complete, the new element transitions in -->
+  <div id="app4">
+    <transition name="fade" mode="out-in">
+      <button v-bind:key="isOn" @click="isOn = !isOn" >
+        {{ isOn? 'off' : 'on' }} 
+      </button>
+    </transition>
+  </div>
+
+  <br>
+
+  <!-- in-out: New element transitions in first, then when complete, the current element transitions out -->
+  <div id="app5">
+    <transition name="slide-fade" mode="in-out">
+      <button v-bind:key="isOn" @click="isOn = !isOn" :style="{ position: 'absolute' }">
+        {{ isOn? 'off' : 'on' }} 
+      </button>
+    </transition>
+  </div>
+</body>
+</html>

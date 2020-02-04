@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enter/Leave & List Transitions - Transitioning Between Elements</title>
+  <style>
+    table { border: 1px solid #ccc; }
+    th, td {
+      width: 300px;
+      border: 1px solid #ccc;
+      text-align: center;
+    }
+
+    .fade-enter, .appear {
+      opacity: 0;
+    }
+
+    .fade-enter-active, .appear-active {
+      transition: opacity 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <transition 
+      appear 
+      appear-class="appear"
+      appear-active-class="appear-active"
+      name="fade"
+    >
+      <table v-if="items.length > 0">
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+        </tr>
+        <tr v-for="item in items" v-bind:key="item.id">
+          <td>{{ item.name }}</td>
+          <td>{{ item.qty }}</td>
+          <td>{{ item.price }}</td>
+        </tr>
+      </table>
+      <p v-else>Sorry, no items found</p>
+    </transition name="fade">
+    <button @click="items.splice(0)">Clear Items</button>
+    <button @click="replenishItems">Replenish Items</button>
+  </div>
+</body>
+</html>

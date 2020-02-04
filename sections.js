@@ -121,5 +121,10 @@ module.exports = [
   '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-05',
   '17_EnterLeave&ListTransitions-01_TransitioningSingleElementsComponents-06',
   '17_EnterLeave&ListTransitions-02_TransitionsOnInitialRender-01',
+  '17_EnterLeave&ListTransitions-03_TransitioningBetweenElements-01',
+  '17_EnterLeave&ListTransitions-03_TransitioningBetweenElements-02',
+  '17_EnterLeave&ListTransitions-03_TransitioningBetweenElements-03',
+  '17_EnterLeave&ListTransitions-04_TransitioningBetweenComponents-01',
+  '17_EnterLeave&ListTransitions-05_ListTransitions-01',
   'index',
 ];

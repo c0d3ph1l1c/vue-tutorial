@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Enter/Leave & List Transitions - Transitioning Between Elements</title>
+</head>
+<body>
+  <!-- When toggling between elements that have the same tag name, you must tell Vue that they are distinct elements by giving them unique key attributes. Otherwise, Vue’s compiler will only replace the content of the element for efficiency. Even when technically unnecessary though, it’s considered good practice to always key multiple items within a <transition> component. -->
+
+  <div id="app">
+    <transition>
+      <button 
+        v-if="isEditing" 
+        key="save"
+        @click="isEditing = false"
+      >
+        Save
+      </button>
+      <button 
+        v-else 
+        key="edit"
+        @click="isEditing = true"
+      >
+        Edit
+      </button>
+    </transition>
+  </div>
+
+  <!-- In these cases, you can also use the key attribute to transition between different states of the same element. Instead of using v-if and v-else, the above example could be rewritten as: -->
+
+  <div id="app2">
+    <transition>
+      <button 
+        v-bind:key="isEditing"
+        @click="isEditing = !isEditing"
+      >
+        {{ isEditing? 'Save' : 'Edit'}}
+      </button>
+    </transition>
+  </div>
+
+  <!-- It’s actually possible to transition between any number of elements, either by using multiple v-ifs or binding a single element to a dynamic property. -->
+  <div id="app3">
+    <transition>
+      <button 
+        v-if="docState === 'saved'" 
+        key="saved"
+        @click="docState = 'editing'"
+      >
+        Edit
+      </button>
+      <button 
+        v-if="docState === 'edited'" 
+        key="edited"
+        @click="docState = 'saved'"
+      >
+        Save
+      </button>
+      <button 
+        v-if="docState === 'editing'" 
+        key="editing"
+        @click="docState = 'edited'"
+      >
+        Cancel
+      </button>
+    </transition>
+  </div>
+
+
+  <!-- Which could also be written as: -->
+  <div id="app4">
+    <transition>
+      <button 
+        v-bind:key="docState"
+        @click="toggleState"
+      >
+        {{ buttonMessage }}
+      </button>
+    </transition>
+  </div>
+</body>
+</html>
