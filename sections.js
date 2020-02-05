@@ -126,5 +126,10 @@ module.exports = [
   '17_EnterLeave&ListTransitions-03_TransitioningBetweenElements-03',
   '17_EnterLeave&ListTransitions-04_TransitioningBetweenComponents-01',
   '17_EnterLeave&ListTransitions-05_ListTransitions-01',
+  '17_EnterLeave&ListTransitions-05_ListTransitions-02',
+  '17_EnterLeave&ListTransitions-05_ListTransitions-03',
+  '17_EnterLeave&ListTransitions-06_ReusableTransitions-01',
+  '17_EnterLeave&ListTransitions-06_ReusableTransitions-02',
+  '17_EnterLeave&ListTransitions-07_DynamicTransitions-01',
   'index',
 ];
