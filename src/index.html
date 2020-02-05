@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>State Transitions - Animate State With Watchers</title>
+  <style>
+    .example-7-color-preview {
+      display: inline-block;
+      width: 50px;
+      height: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div id="example-7">
+    <input 
+      v-model="colorQuery"
+      v-on:keyup.enter="updateColor"
+      placeholder="Enter a color"
+    >
+    <button v-on:click="updateColor">Update</button>
+    <p>Preview:</p>
+    <span
+      v-bind:style="{ backgroundColor: tweenedCSSColor }"
+      class="example-7-color-preview"
+    ></span>
+    <p>{{ tweenedCSSColor }}</p>
+  </div>
+</body>
+</html>

@@ -4,7 +4,10 @@
   "description": "",
   "main": "webpack.config.js",
   "dependencies": {
+    "@tweenjs/tween.js": "^18.5.0",
     "axios": "^0.19.2",
+    "color-js": "^1.0.5",
+    "gsap": "^3.1.1",
     "lodash": "^4.17.15",
     "pikaday": "^1.8.0",
     "velocity-animate": "^1.2.3",
