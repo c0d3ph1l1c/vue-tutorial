@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>State Transitions - Dynamic State Transitions</title>
+  <style>
+    svg {
+      display: block;
+    }
+
+    polygon {
+      fill: #41b383;
+    }
+
+    circle {
+      fill: transparent;
+      stroke: #35495e;
+    }
+
+    input[type="range"] {
+      display: block;
+      width: 100%;
+      margin-bottom: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <svg width="200" height="200">
+      <polygon :points="points"></polygon>
+      <circle cx="100" cy="100" r="90"></circle>
+    </svg>
+    <label>Slides: {{ sides }}</label>
+    <input type="range" min="3" max="500" v-model.number="sides">
+    <label>Minimum Radius: {{ minRadius }}</label>
+    <input type="range" min="0" max="90" v-model.number="minRadius">
+    <label>Update Interval: {{ updateInterval }} milliseconds</label>
+    <input type="range" min="10" max="2000" v-model.number="updateInterval">
+  </div>
+</body>
+</html>

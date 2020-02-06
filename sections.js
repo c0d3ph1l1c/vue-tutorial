@@ -133,5 +133,7 @@ module.exports = [
   '17_EnterLeave&ListTransitions-07_DynamicTransitions-01',
   '18_StateTransitions-01_AnimateStateWithWatchers-01',
   '18_StateTransitions-01_AnimateStateWithWatchers-02',
+  '18_StateTransitions-02_DynamicStateTransitions-01',
+  '18_StateTransitions-03_OrganizingTransitionsIntoComponents-01',
   'index',
 ];
