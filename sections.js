@@ -145,5 +145,7 @@ module.exports = [
   '20_CustomDirectives-02_DirectiveHooksArguments-01',
   '20_CustomDirectives-02_DirectiveHooksArguments-02',
   '20_CustomDirectives-02_DirectiveHooksArguments-03',
+  '20_CustomDirectives-03_FunctionShorthand-01',
+  '20_CustomDirectives-04_ObjectLiterals-01',
   'index',
 ];
