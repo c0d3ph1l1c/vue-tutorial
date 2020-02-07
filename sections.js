@@ -135,5 +135,11 @@ module.exports = [
   '18_StateTransitions-01_AnimateStateWithWatchers-02',
   '18_StateTransitions-02_DynamicStateTransitions-01',
   '18_StateTransitions-03_OrganizingTransitionsIntoComponents-01',
+  '19_Mixins-01_Basics-01',
+  '19_Mixins-02_OptionMerging-01',
+  '19_Mixins-02_OptionMerging-02',
+  '19_Mixins-02_OptionMerging-03',
+  '19_Mixins-03_GlobalMixin-01',
+  '19_Mixins-04_CustomOptionMergeStrategies-01',
   'index',
 ];
