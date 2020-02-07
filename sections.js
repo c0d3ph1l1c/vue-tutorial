@@ -141,5 +141,9 @@ module.exports = [
   '19_Mixins-02_OptionMerging-03',
   '19_Mixins-03_GlobalMixin-01',
   '19_Mixins-04_CustomOptionMergeStrategies-01',
+  '20_CustomDirectives-01_Intro-01',
+  '20_CustomDirectives-02_DirectiveHooksArguments-01',
+  '20_CustomDirectives-02_DirectiveHooksArguments-02',
+  '20_CustomDirectives-02_DirectiveHooksArguments-03',
   'index',
 ];
