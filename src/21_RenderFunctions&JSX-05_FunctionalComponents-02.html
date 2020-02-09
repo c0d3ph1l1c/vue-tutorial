@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Render Functions & JSX - Functional Components</title>
+  <style>
+    .btn {
+      border: none;
+      outline: none;
+      width: 4rem;
+      height: 2rem;
+      border-radius: 5px;
+    }
+
+    .btn-primary {
+      background: #99f;
+      color: #fff;
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .btn-primary:hover {
+      background: #f9f;
+      color: #fff;
+    }
+    
+  </style>
+</head>
+<body>
+  <!-- Passing Attributes and Events to Child Elements/Components -->
+  <div id="app">
+    <my-functional-button v-on:click="toggleButton">
+      {{ buttonText }}
+    </my-functional-button>
+    <my-functional-button-2 v-on:click="toggleButton2">
+      {{ buttonText2 }}
+    </my-functional-button-2>
+  </div>
+
+</body>
+</html>

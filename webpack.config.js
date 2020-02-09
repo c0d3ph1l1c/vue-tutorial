@@ -1,6 +1,7 @@
 const path = require('path');
 const sections = require('./sections');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 
 module.exports = {
   mode: 'development',
@@ -13,16 +14,30 @@ module.exports = {
     index: `${sections[sections.length-1]}.html`,
     filename: `js/${sections[sections.length-1]}.js`
   },
-  plugins: [],
+  plugins: [
+    // Only use it for single file components
+    new VueLoaderPlugin()      
+  ],
   module: {
     rules: [
       {
-        test: /\.,?js$/,
+        // Only use it for single file components
+        test: /\.vue$/,
+        include: [
+          path.resolve(__dirname, "components/my-functional-button-2")
+        ],
+        loader: 'vue-loader'
+      },
+      {
+        test: /\.?js$/,
         exclude: /(node_modules|bower_components)/,
         use: {
           loader: 'babel-loader',
           options: {
-            presets: ['@babel/preset-env']
+            presets: [
+              '@babel/preset-env',
+              '@vue/babel-preset-jsx'
+            ]
           }
         }
       },
