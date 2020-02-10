@@ -21,10 +21,24 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(pug|jade)$/,
+        use: 'pug-plain-loader'
+      },
+      {
+        test: /\.styl(us)?$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'stylus-loader'
+        ]
+      },
+      {
         // Only use it for single file components
         test: /\.vue$/,
         include: [
-          path.resolve(__dirname, "components/my-functional-button-2")
+          path.resolve(__dirname, "components/my-functional-button-2"),
+          path.resolve(__dirname, "components/Hello"),
+          path.resolve(__dirname, "components/OtherComponent"),
         ],
         loader: 'vue-loader'
       },
