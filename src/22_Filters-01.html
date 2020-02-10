@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Filters</title>
+  <style>
+    #div-custom {
+      width: 100px;
+      height: 100px;
+      background: #f88;
+    }
+  </style>
+</head>
+<body>
+  <div id="app">
+    <input 
+      type="text" 
+      v-model="message"
+      placeholder="Capitalize"
+    >
+    <custom-heading :message="message"></custom-heading>
+
+    <input 
+      type="text" 
+      v-model="message2"
+      placeholder="Capitalize"
+    >
+    <custom-heading-2 :message="message2"></custom-heading-2>
+
+    <br><br>
+
+    <custom-div v-bind:raw-id="rawId"></custom-div>
+
+    <br><br>
+
+    <input 
+      type="text" 
+      v-model="name"
+      placeholder="Enter your name"
+    >
+    <custom-greeting :name="name"></custom-greeting>
+
+    <br><br>
+
+    <input 
+      type="text" 
+      v-model="name2"
+      placeholder="Enter your name"
+    >
+    <custom-greeting-2 :name="name2"></custom-greeting-2>
+  </div>
+</body>
+</html>
