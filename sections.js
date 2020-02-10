@@ -157,5 +157,6 @@ module.exports = [
   '21_RenderFunctions&JSX-05_FunctionalComponents-01',
   '21_RenderFunctions&JSX-05_FunctionalComponents-02',
   '21_RenderFunctions&JSX-05_FunctionalComponents-03',
+  '21_RenderFunctions&JSX-06_TemplateCompilation-01',
   'index',
 ];
