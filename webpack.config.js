@@ -21,6 +21,14 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.scss$/,
+        use: [
+          'vue-style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
+      },
+      {
         test: /\.(pug|jade)$/,
         use: 'pug-plain-loader'
       },
@@ -39,6 +47,10 @@ module.exports = {
           path.resolve(__dirname, "components/my-functional-button-2"),
           path.resolve(__dirname, "components/Hello"),
           path.resolve(__dirname, "components/OtherComponent"),
+          path.resolve(__dirname, "todolist/App"),
+          path.resolve(__dirname, "todolist/components/BaseInputText"),
+          path.resolve(__dirname, "todolist/components/TodoList"),
+          path.resolve(__dirname, "todolist/components/TodoListItem"),
         ],
         loader: 'vue-loader'
       },
