@@ -162,5 +162,8 @@ module.exports = [
   '23_SingleFileComponent-01_Introduction-01',
   '23_SingleFileComponent-01_Introduction-02',
   '23_SingleFileComponent-02_GettingStarted-01',
+  '24_UnitTesting-01_SimpleAssertions-01',
+  '24_UnitTesting-02_WritingTestableComponents-01',
+  '24_UnitTesting-03_AssertingAsynchronousUpdates-01',
   'index',
 ];

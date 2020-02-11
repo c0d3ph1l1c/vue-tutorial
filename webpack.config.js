@@ -51,6 +51,7 @@ module.exports = {
           path.resolve(__dirname, "todolist/components/BaseInputText"),
           path.resolve(__dirname, "todolist/components/TodoList"),
           path.resolve(__dirname, "todolist/components/TodoListItem"),
+          path.resolve(__dirname, "components/MyTestComponent"),
         ],
         loader: 'vue-loader'
       },
